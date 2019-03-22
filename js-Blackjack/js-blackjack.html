@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--meta information-->
+        <meta charset="utf-8">
+        <title>js-Blackjack</title>
+    </head>
+    <body>
+        <!--the content of the page-->
+        <h1>Welcome to js-Blackjack!</h1>
+        <h4>by Brian Schroeder Jr.</h4>
+        <div>
+            <p>js-Blackjack is a simple implementation of the classic Blackjack card game using HTML and JavaScript.</p>
+        </div>
+        <br>
+        <div>
+            <p id=outputPane style="font-family:'Courier New', Courier, monospace"></p>
+        </div>
+        <button id="btnStart">Deal Me In</button>
+        <button id="btnHit">Hit Me</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="btnStay">Stay</button>
+        <br>
+        <br>
+        <div id="winLossPane">
+            <table>
+                <tr>
+                    <td>Wins:</td>
+                    <td id="winCnt"></td>
+                </tr>
+                <tr>
+                    <td>Losses:</td>
+                    <td id="lossCnt"></td>
+                </tr>
+            </table>
+        </div>
+
+        <script src="js/playing-cards.js"></script>
+        <script src="js/js-blackjack.js"></script>
+    </body>
+</html>
