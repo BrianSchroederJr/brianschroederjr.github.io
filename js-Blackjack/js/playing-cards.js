@@ -27,43 +27,43 @@ function getCardsDesc(cards) {
     //     cardsDesc += getCardDesc(cards[card]) + "<br>";
     // }
 
-    // Put cards in individual table data elements within a table row
-    cardsDesc += "<table><tr>"
+    // Put card chars in individual table data elements within a table rows
+    cardsDesc += "<table><tr>";
     // Draw cards - 1 line at a time for 6 lines
     // Top
     for (i=0; i<cards.length; i++) {
-        cardsDesc += "<td>&nbsp;-----&nbsp;&nbsp;";
+        cardsDesc += "<td>&nbsp;</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>&nbsp;</td><td>&nbsp;</td>";
     }
-    cardsDesc += "<br>"
+    cardsDesc += "</tr><br><tr>"
     for (i=0; i<cards.length; i++) {
         if(cards[i].rank === "Ten") {
-            cardsDesc += "|" + getCardRankSymbol(cards[i]) + "&nbsp;&nbsp;&nbsp;|&nbsp;";
+            cardsDesc += "<td>|</td><td>" + getCardRankSymbol(cards[i]) + "</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>|</td><td>&nbsp;</td>";
         }
         else {
-            cardsDesc += "|" + getCardRankSymbol(cards[i]) + "&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;";
+            cardsDesc += "<td>|</td><td>" + getCardRankSymbol(cards[i]) + "</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>|</td><td>&nbsp;</td>";
         }
     }
-    cardsDesc += "<br>"
+    cardsDesc += "</tr><br><tr>"
     for (i=0; i<cards.length; i++) {
-        cardsDesc += "|" + getCardSuitSymbol(cards[i]) + "&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;";
+        cardsDesc += "<td>|</td><td>" + getCardSuitSymbol(cards[i]) + "</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>|</td><td>&nbsp;</td>";
     }
-    cardsDesc += "<br>"
+    cardsDesc += "</tr><br><tr>"
     for (i=0; i<cards.length; i++) {
-        cardsDesc += "|&nbsp;&nbsp;&nbsp;&nbsp;" + getCardSuitSymbol(cards[i]) + "|&nbsp;";
+        cardsDesc += "<td>|&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>" + getCardSuitSymbol(cards[i]) + "</td><td>|</td><td>&nbsp;</td>";
     }
-    cardsDesc += "<br>"
+    cardsDesc += "</tr><br><tr>"
     for (i=0; i<cards.length; i++) {
         if(cards[i].rank === "Ten") {
-            cardsDesc += "|&nbsp;&nbsp;&nbsp;" + getCardRankSymbol(cards[i]) + "|&nbsp;";
+            cardsDesc += "<td>|&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>" + getCardRankSymbol(cards[i]) + "</td><td>|</td><td>&nbsp;</td>";
         }
         else {
-            cardsDesc += "|&nbsp;&nbsp;&nbsp;&nbsp;" + getCardRankSymbol(cards[i]) + "|&nbsp;";
+            cardsDesc += "<td>|</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>" + getCardRankSymbol(cards[i]) + "</td><td>|</td><td>&nbsp;</td>";
         }
     }
-    cardsDesc += "<br>"
+    cardsDesc += "</tr><br><tr>"
     // Bottom
     for (i=0; i<cards.length; i++) {
-        cardsDesc += "&nbsp;-----&nbsp;&nbsp;</td>"
+        cardsDesc += "<td>&nbsp;</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>&nbsp;</td><td>&nbsp;</td>"
     }
     cardsDesc += "</tr></table>";
     cardsDesc += "<br>";
