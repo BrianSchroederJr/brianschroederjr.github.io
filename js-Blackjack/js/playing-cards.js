@@ -27,10 +27,12 @@ function getCardsDesc(cards) {
     //     cardsDesc += getCardDesc(cards[card]) + "<br>";
     // }
 
+    // Put cards in individual table data elements within a table row
+    cardsDesc += "<table><tr>"
     // Draw cards - 1 line at a time for 6 lines
     // Top
     for (i=0; i<cards.length; i++) {
-        cardsDesc += "&nbsp;-----&nbsp;&nbsp;";
+        cardsDesc += "<td>&nbsp;-----&nbsp;&nbsp;";
     }
     cardsDesc += "<br>"
     for (i=0; i<cards.length; i++) {
@@ -61,9 +63,10 @@ function getCardsDesc(cards) {
     cardsDesc += "<br>"
     // Bottom
     for (i=0; i<cards.length; i++) {
-        cardsDesc += "&nbsp;-----&nbsp;&nbsp;"
+        cardsDesc += "&nbsp;-----&nbsp;&nbsp;</td>"
     }
-    cardsDesc += "<br>"
+    cardsDesc += "</tr></table>";
+    cardsDesc += "<br>";
 
     return cardsDesc;
 }
