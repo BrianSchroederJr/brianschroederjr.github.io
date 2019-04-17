@@ -1,4 +1,2 @@
-# brianschroederjr.github.io
-My GitHub Page
+# Brian Schroeder Jr. - Portfolio
 
-Still under construction
