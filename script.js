@@ -5,7 +5,7 @@ var cnvs = document.getElementById("backCanvas");
 var winWidth = window.innerWidth;
 var winHeight = window.innerHeight;
 var starCnt = 1000;
-var starAreaOfInfluence = 200;
+var starAreaOfInfluence = 400;
 var xDist;
 var yDist;
 var xDist2;
@@ -51,11 +51,11 @@ function buildStars() {
             {
                 x: Math.random() * winWidth,
                 y: Math.random() * winHeight,
-                r: 0.25 + (Math.random()-0.15),
-                h: 190 + (Math.random()*100),
+                r: 0.4 + (Math.random()*1.5),
+                h: 195 + (Math.random()*90),
                 s: Math.random() * 100,
                 l: 70,
-                a: 0.45 + (Math.random()-0.25)
+                a: 0.4 + (Math.random()-0.25)
             }
         );
     }
@@ -91,8 +91,8 @@ function drawStarsMove(mX, mY) {
         mag = Math.sqrt(xDist2 + yDist2);
         xNorm = xDist / mag;
         yNorm = yDist / mag;
-        xMove = xNorm * (1/mag) * 150;
-        yMove = yNorm * (1/mag) * 150;
+        xMove = xNorm * (1/mag) * 450;
+        yMove = yNorm * (1/mag) * 450;
         
         // Draw static stars (all stars outside of the area of influence)
         if(mag > starAreaOfInfluence) {
