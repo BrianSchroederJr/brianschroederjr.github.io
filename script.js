@@ -5,7 +5,7 @@ var cnvs = document.getElementById("backCanvas");
 var winWidth = window.innerWidth;
 var winHeight = window.innerHeight;
 var starCnt = 1000;
-var starAreaOfInfluence = 165;
+var starAreaOfInfluence = 200;
 var xDist;
 var yDist;
 var xDist2;
@@ -51,11 +51,11 @@ function buildStars() {
             {
                 x: Math.random() * winWidth,
                 y: Math.random() * winHeight,
-                r: 0.25 + (Math.random()-0.25),
+                r: 0.25 + (Math.random()-0.15),
                 h: 190 + (Math.random()*100),
                 s: Math.random() * 100,
                 l: 70,
-                a: 0.4 + (Math.random()-0.25)
+                a: 0.45 + (Math.random()-0.25)
             }
         );
     }
