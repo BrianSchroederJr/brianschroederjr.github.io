@@ -2,37 +2,138 @@
 <html lang="en">
 
 	<head>
-	    	<meta charset="UTF-8">
-	    	<meta name="description" content="Brian Schroeder Jr's Portfolio Page">
-	    	<meta name="keywords" content="Brian,Schroeder,Schroeder Jr.,Full-Stack,Web,Developer,Programmer,C#,C Sharp,Angular,JavaScript,HTML,CSS,Portfolio,Design,.NET,SQL">
-	    	<meta name="author" content="Brian Schroeder Jr.">
-	    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta charset="UTF-8">
+	    <meta name="description" content="Brian Schroeder Jr's Portfolio Page">
+	    <meta name="keywords" content="Brian,Schroeder,Schroeder Jr.,Full-Stack,Web,Developer,Programmer,C#,C Sharp,Angular,JavaScript,HTML,CSS,Portfolio,Design,.NET,SQL">
+	    <meta name="author" content="Brian Schroeder Jr.">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Brian Schroeder Jr's Portfolio</title>
-	    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	    	<link rel="stylesheet" href="styles.css">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="styles.css">
 	</head>
 		
-	<body style="background-color: #1f1f1f;">
-		<canvas id="backCanvas" onmousemove="mouseMove(event)"></canvas>
+	<body id="Home">
 
-		<div class="card" style="background: rgba(128,128,128,0.3); color: white; position: absolute; left: 50px; top: 50px;">
-			<div class="card-body">
-				<h2 classs="card-title"><img src="images/PteraShip.png" alt="A ship I made" width="48px" height="48px">Brian Schroeder Jr.'s GitHub Projects Page</h2>
-				<h5 class="card-subtitle mb-2 text-muted">Welcome!</h5>
-				<br>
-				<p class="card-text">I am a developer with a passion for programming and design.<br/>Please feel free to check out my GitHub repositories or experience some of my creations via the links below!</p>
-				<a href="https://github.com/BrianSchroederJr?tab=repositories" class="btn btn-primary">Go to my GitHub Repositories</a>
+		<!-- Nav Bar -->
+		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+			<span class="navbar-brand mb-0 h1">Brian Schroeder Jr.</span>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav ml-auto">
+				<li class="nav-item" style="padding-left: 2em;">
+					<a class="nav-link" href="#About" title="About Me">About</a>
+				  </li>
+				<li class="nav-item" style="padding-left: 2em;">
+					<a class="nav-link" href="https://github.com/BrianSchroederJr"><img src="images/GitHub-Mark-Gray-32px.png" title="My GitHub Page" alt="GitHub" onmouseover="this.src='images/GitHub-Mark-LightGray-32px.png';" onmouseout="this.src='images/GitHub-Mark-Gray-32px.png'"></a>
+				</li>
+				<li class="nav-item" style="padding-left: 2em;">
+					<a class="nav-link" href="https://www.linkedin.com/in/brian-schroeder-jr-777a9b166"><img src="images/LI-In-Bug-Gray.png" title="My LinkedIn Profile" alt="LinkedIn" onmouseover="this.src='images/LI-In-Bug-LightGray.png'" onmouseout="this.src='images/LI-In-Bug-Gray.png'"></a>
+				</li>
+			  </ul>
+			</div>
+		</nav>
+
+
+		<!-- Home -->
+		<div class="d-flex flex-column">
+			<div class="mb-5">
+				<h1 id="HelloWorld">
+					<span id="HelloWorldText" class="text-nowrap" style="padding: 0em; margin: 0em; text-shadow: 2px 2px 1px #1f1f1f;"></span>
+				</h1>
+			</div>
+			<div class="p-5 m-5">
+					&nbsp;
+			</div>
+			<div class="d-flex flex-row text-right">
+				<div class="col-3"></div>
+				<div class="col-8">
+					<h2>
+							<span style="padding: 0em; margin: 0em; text-shadow: 2px 2px 1px #1f1f1f;">... my name is Brian.<br/><br/>And I have a passion for creating<br/>awesome user experiences.</span>
+					</h2>
+				</div>
+			</div>
+			<div class="p-5 m-5">
+				&nbsp;
+			</div>
+			<div class="p-2 m-2">
+					&nbsp;
 			</div>
 		</div>
 
-		<div class="card" style="background: rgba(108, 85, 131, 0.3); color: white; position: absolute; left: 50px; top: 350px;">
-			<div class="card-header" style="background: rgba(58, 36, 80, 0.3);">
-				<h2 style="color: white;"><img src="images/javascript_logo100x100.png" alt="JavaScript Logo" width="48px" height="48px">JavaScript Projects</h2>
+
+		<!-- About -->
+		<div id="About" class="d-flex flex-row">
+		<div class="flex-column">
+			<div class="p-3 m-3">
+					&nbsp;
 			</div>
-			<div class="card-body">
-				<a href="https://brianschroederjr.github.io/js-Blackjack/js-blackjack.html" class="btn btn-warning">Play js-Blackjack</a>
+			<div>
+				<h3>
+					About Me
+				</h3>
+			</div>
+			<!-- About Me text-->
+			<div class="pl-5 col-9 text-wrap">
+				<p>
+					My name is Brian Schroeder Jr. and I currently live in Central California.
+				</p>
+				<p>
+					I have over <span id="yearsOfExperience"></span> years of experience in software development and web design.&nbsp;&nbsp;My experience has been gained through 
+					education, employment in the financial industry, and through my current work with the judicial branch of the government.
+				</p>
+				<p>
+					I have a passion for creating useful and elegant software solutions that enhance user experiences and streamline business processes.&nbsp;&nbsp;I have created front-end 
+					software using various technologies and worked on database back-ends to support developments and create reports for business needs.&nbsp;&nbsp;I enjoy constantly 
+					learning about new and better ways to deliver products that meet the needs of the users that interact with them.
+				</p>
+				<p>
+					In my free time I enjoy cooking, golfing, playing video games, spending time with my family, and occasionally painting (both physical and digital) scenes like the 
+					digital painting on the background of this page! 
+				</p>
+				<!-- Back To Top -->
+				<p class="pt-3 pb-1">
+					<a class="text-secondary" href="#Home">Back to Top</a>
+				</p>
+				<!-- Line -->
+				<div class="d-flex flex-row justify-content-center">
+					<div class="col-1.5"></div>
+					<div class="col-9"><hr style="border-top: 1px solid #6C757D;"/></div>
+					<div class="col-1.5"></div>
+				</div>
+				<!-- Links -->
+				<div class="d-flex flex-row justify-content-center">
+					<a class="text-secondary nav-link m-4" href="https://github.com/BrianSchroederJr"><img src="images/GitHub-Mark-Gray-32px.png" title="My GitHub Page" alt="GitHub" onmouseover="this.src='images/GitHub-Mark-LightGray-32px.png';" onmouseout="this.src='images/GitHub-Mark-Gray-32px.png'"></a>
+					<a class="text-secondary nav-link m-4" href="https://www.linkedin.com/in/brian-schroeder-jr-777a9b166"><img src="images/LI-In-Bug-Gray.png" title="My LinkedIn Profile" alt="LinkedIn" onmouseover="this.src='images/LI-In-Bug-LightGray.png'" onmouseout="this.src='images/LI-In-Bug-Gray.png'"></a>
+				</div>
+				<!-- Copyright -->
+				<div class="d-flex flex-row justify-content-center pt-5 pb-5">
+					<footer class="d-flex flex-column">
+						<div class="d-flex flex-row justify-content-center">
+							<small class="text-secondary">Copyright &copy; <span id="currYear"></span></small>
+						</div>
+						<div class="d-flex flex-row justify-content-center">
+							<small class="text-secondary">Created by Brian Schroeder Jr.</small>
+						</div>
+						<div class="d-flex flex-row justify-content-center">
+							<small class="text-secondary">All rights reserved.</small>
+						</div>
+					</footer>
+				</div>
+				<div class="p-3 m-3">
+						&nbsp;
+				</div>
 			</div>
 		</div>
+		</div>			
+
+
 		<script src="script.js"></script>
 	</body>
+
 </html>
