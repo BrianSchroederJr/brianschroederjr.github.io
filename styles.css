@@ -14,10 +14,38 @@ body {
     background-size: cover;
 }
 
-h1, h2, h3, p {
-    color: white;
-    margin: 1em;
+/* xs - halving all used default font-sizes*/ 
+@media(min-width: 0px) and (max-width: 575.99px) {
+    h1 {
+        color: white;
+        margin: 0.5em;
+        font-size: 1.3em;
+    }
+    h2 {
+        color: white;
+        margin: 0.5em;
+        font-size: 1.2em;
+    }
+    h3 {
+        color: white;
+        margin: 0.5em;
+        font-size: 1.1em;
+    }
+    p {
+        color: white;
+        margin: 0.5em;
+        font-size: 1em;
+    }
 }
+
+/* Small and up*/
+@media(min-width: 576px) {
+    h1, h2, h3, p {
+        color: white;
+        margin: 1em;
+    }
+}
+
 
 #HelloWorld {
     font-family: "Courier New", Courier, monospace;
