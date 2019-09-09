@@ -8,10 +8,18 @@ html, body {
 body {
     background-color: #1f1f1f; 
     background-image: url('art/Ocean Sunset sm.jpg'); 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
+    background-repeat: repeat; 
+    /*background-attachment: fixed; */
     background-position: center top; 
     background-size: cover;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        /* Had to do this for small iOS devices which use the page body size (not viewport size like everyone else) as the background art was stretched too big on iPhone. */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }
 
 /* xs - halving all used default font-sizes*/ 
